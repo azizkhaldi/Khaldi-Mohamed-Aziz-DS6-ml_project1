@@ -1,0 +1,4 @@
+xpack.security.enabled: false
+elasticsearch.username: ""
+elasticsearch.password: ""
+

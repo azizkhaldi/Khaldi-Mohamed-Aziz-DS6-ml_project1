@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/420df9fe55b54d91a96b892453a62d22/artifacts
+end_time: 1739584422992
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 420df9fe55b54d91a96b892453a62d22
+run_name: sincere-slug-480
+run_uuid: 420df9fe55b54d91a96b892453a62d22
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739584421747
+status: 3
+tags: []
+user_id: aziz

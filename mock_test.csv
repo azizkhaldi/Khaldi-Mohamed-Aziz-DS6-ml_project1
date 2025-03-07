@@ -1,0 +1,7 @@
+State,International plan,Voice mail plan,Churn,Account length,Area code,Total day minutes,Total day calls
+CA,Yes,Yes,Yes,100,408,100,20
+TX,No,No,No,200,510,200,30
+NV,Yes,Yes,Yes,150,510,150,25
+TX,No,Yes,No,180,408,180,22
+CA,Yes,No,Yes,210,408,210,28
+NV,No,Yes,No,160,510,160,30

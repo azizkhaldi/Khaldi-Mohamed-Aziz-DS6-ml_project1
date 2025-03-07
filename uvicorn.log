@@ -1,0 +1,230 @@
+nohup: ignoring input
+INFO:     Will watch for changes in these directories: ['/mnt/c/Users/azizk/Khaldi-Mohamed-Aziz-4DS6-ml_project']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1934] using StatReload
+✅ Modèle chargé avec succès !
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/azizk/Khaldi-Mohamed-Aziz-4DS6-ml_project/app.py", line 20, in <module>
+    class PredictionInput(BaseModel):
+  File "/mnt/c/Users/azizk/Khaldi-Mohamed-Aziz-4DS6-ml_project/app.py", line 21, in PredictionInput
+    features: list[float]
+TypeError: 'type' object is not subscriptable
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [10942]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Modèle chargé avec succès !
+INFO:     127.0.0.1:56972 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56972 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60522 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:60522 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:60120 - "POST /predict HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10942]
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11126]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Modèle chargé avec succès !
+INFO:     127.0.0.1:57276 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34146 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:34146 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:39244 - "POST /predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:40642 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:40936 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:38302 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:39330 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:39596 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39596 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39608 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:39608 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:60082 - "POST /predict HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'retrain_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11126]
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11266]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'retrain_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11266]
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11318]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'retrain_model.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11318]
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11369]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Modèle chargé avec succès !
+INFO:     127.0.0.1:59542 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59542 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59556 - "POST /predict HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:59556 - "POST /predict HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11369]
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11442]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Modèle chargé avec succès !
+INFO:     127.0.0.1:57394 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57406 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57406 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53278 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41414 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36276 - "POST /predict HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11442]
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+Process SpawnProcess-8:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/azizk/Khaldi-Mohamed-Aziz-4DS6-ml_project/app.py", line 1, in <module>
+    @app.post("/predict")
+NameError: name 'app' is not defined
+Process SpawnProcess-9:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/config.py", line 434, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/c/Users/azizk/Khaldi-Mohamed-Aziz-4DS6-ml_project/app.py", line 1, in <module>
+    @app.post("/predict")
+NameError: name 'app' is not defined
+WARNING:  StatReload detected changes in 'app.py'. Reloading...
+/mnt/c/Users/azizk/venv/lib/python3.8/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+INFO:     Started server process [11532]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Modèle chargé avec succès !
+INFO:     127.0.0.1:45454 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49766 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57524 - "POST /predict HTTP/1.1" 200 OK

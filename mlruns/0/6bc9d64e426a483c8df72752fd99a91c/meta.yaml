@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/6bc9d64e426a483c8df72752fd99a91c/artifacts
+end_time: 1739584044876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6bc9d64e426a483c8df72752fd99a91c
+run_name: agreeable-trout-253
+run_uuid: 6bc9d64e426a483c8df72752fd99a91c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739584044516
+status: 4
+tags: []
+user_id: aziz

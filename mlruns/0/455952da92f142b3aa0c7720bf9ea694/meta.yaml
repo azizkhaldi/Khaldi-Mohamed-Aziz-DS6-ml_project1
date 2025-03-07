@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/455952da92f142b3aa0c7720bf9ea694/artifacts
+end_time: 1740130742338
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 455952da92f142b3aa0c7720bf9ea694
+run_name: delicate-mink-763
+run_uuid: 455952da92f142b3aa0c7720bf9ea694
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740130739405
+status: 4
+tags: []
+user_id: aziz
