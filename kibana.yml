@@ -1,4 +1,2 @@
-xpack.security.enabled: false
-elasticsearch.username: ""
-elasticsearch.password: ""
+elasticsearch.requestTimeout: 60000  # Adjust this value as necessary
 

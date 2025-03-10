@@ -108,10 +108,12 @@ docker-push:
 # Démarrer Elasticsearch et Kibana
 start-monitoring:
 	docker-compose up -d
+	@echo "Elasticsearch et Kibana sont maintenant en cours d'exécution."
 
 # Démarrer MLflow
 start-mlflow:
 	mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host 0.0.0.0 --port 5000
+	@echo "MLflow est maintenant en cours d'exécution sur http://localhost:5000."
 
 # Vérifier si Elasticsearch fonctionne
 check-es:
