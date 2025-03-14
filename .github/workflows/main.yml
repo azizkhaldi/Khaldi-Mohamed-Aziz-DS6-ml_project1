@@ -1,9 +1,16 @@
-name: Run Tests
+name: ML Project CI/CD
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  data_preprocessing:
+    name: Data Preprocessing
     runs-on: ubuntu-latest
 
     steps:
@@ -13,16 +20,61 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.8'  # Change si nécessaire
+          python-version: "3.8"
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Assure-toi que pytest est listé ici
+          pip install -r requirements.txt
 
-      - name: Install pytest
-        run: pip install pytest  # Ajouté pour éviter l'erreur
+      - name: Run data preprocessing script
+        run: |
+          python scripts/data_preprocessing.py
 
-      - name: Run tests
-        run: pytest tests/
+  model_training:
+    name: Model Training
+    runs-on: ubuntu-latest
+    needs: data_preprocessing
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Train model
+        run: |
+          python scripts/train_model.py
+
+  testing:
+    name: Run Unit & Functional Tests
+    runs-on: ubuntu-latest
+    needs: [data_preprocessing, model_training]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          pytest tests/unit/
+
+      - name: Run functional tests
+        run: |
+          pytest tests/functional/
 
