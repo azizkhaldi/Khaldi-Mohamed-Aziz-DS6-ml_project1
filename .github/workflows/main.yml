@@ -73,11 +73,12 @@ jobs:
 
       - name: Run unit tests
         run: |
-          pytest tests/unit/
+          pytest tests/
 
       - name: Run functional tests
         run: |
-          pytest tests/functional/
+          pytest tests/
+
 
   notify_success:
     name: Notify Success
