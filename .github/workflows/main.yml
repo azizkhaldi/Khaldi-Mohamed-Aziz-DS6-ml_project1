@@ -1,12 +1,6 @@
-name: CI Pipeline
+name: Run Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   build:
@@ -14,18 +8,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.8'
+          python-version: '3.8'  # Change si nécessaire
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Assure-toi que pytest est listé ici
+
+      - name: Install pytest
+        run: pip install pytest  # Ajouté pour éviter l'erreur
 
       - name: Run tests
-        run: |
-          pytest tests/
+        run: pytest tests/
 
