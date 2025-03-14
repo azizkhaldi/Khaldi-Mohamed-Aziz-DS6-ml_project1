@@ -69,6 +69,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install pytest  # Installation de pytest
 
       - name: Run unit tests
         run: |
@@ -94,5 +95,5 @@ jobs:
 
       - name: Static success step
         run: |
-          echo "The pipeline has completed successfully!"  # Message de succès statique
+          echo "The pipeline has completed successfully!"
 
