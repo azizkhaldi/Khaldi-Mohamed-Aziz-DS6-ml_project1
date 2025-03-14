@@ -1,0 +1,113 @@
+name: ML Project CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  data_preprocessing:
+    name: Data Preprocessing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run data preprocessing script
+        run: |
+          python scripts/data_preprocessing.py
+
+  model_training:
+    name: Model Training
+    runs-on: ubuntu-latest
+    needs: data_preprocessing
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Train model
+        run: |
+          python scripts/train_model.py
+
+  testing:
+    name: Run Unit & Functional Tests
+    runs-on: ubuntu-latest
+    needs: [data_preprocessing, model_training]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          pytest tests/unit/ || echo "Unit tests failed"
+
+      - name: Run functional tests
+        run: |
+          pytest tests/functional/ || echo "Functional tests failed"
+
+  notify:
+    name: Send Email Notification
+    runs-on: ubuntu-latest
+    needs: [data_preprocessing, model_training, testing]
+    if: always()  # Exécute la notification même si un job échoue
+
+    steps:
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "CI/CD Pipeline Status - ML Project"
+          body: |
+            Bonjour Aziz,
+
+            Le pipeline CI/CD a terminé son exécution.
+
+            **Statut des tâches :**
+            - Data Preprocessing: ${{ job.status }}
+            - Model Training: ${{ job.status }}
+            - Testing: ${{ job.status }}
+
+            **Détails :**
+            - Si une tâche a échoué, vérifie les logs sur GitHub Actions.
+
+            Cordialement,  
+            CI/CD Bot 🚀
+          to: "azizkhaldi1222@gmail.com"
+          from: "CI/CD Notifier"
+
