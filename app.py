@@ -4,7 +4,7 @@ from typing import List
 import pickle
 import numpy as np
 import pandas as pd
-
+#
 # Charger le modèle sauvegardé
 MODEL_PATH = "model.pkl"
 
