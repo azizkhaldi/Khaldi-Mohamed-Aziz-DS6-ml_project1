@@ -2,12 +2,7 @@
 
 *Transform Data Into Actionable Insights Instantly*  
 
-[![License](https://img.shields.io/badge/license-MIT-green)]()  
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()  
-[![Docker](https://img.shields.io/badge/docker-ready-blue)]()  
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-green)]()  
-[![MLflow](https://img.shields.io/badge/MLflow-2.0+-orange)]()  
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-blue)]()  
+[![License](https://img.shields.io/badge/license-MIT-green)]()  [![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()  [![Docker](https://img.shields.io/badge/docker-ready-blue)]()  [![FastAPI](https://img.shields.io/badge/FastAPI-0.95+-green)]()  [![MLflow](https://img.shields.io/badge/MLflow-2.0+-orange)]()  [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-blue)]()  
 
 Built with the following technologies:  
 `Python` `FastAPI` `Scikit-learn` `TensorFlow` `MLflow` `Docker` `Kubernetes` `GitHub Actions` `Prometheus` `Grafana` `Elasticsearch` `Kibana`  
